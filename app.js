@@ -42,27 +42,6 @@ app.get("/", (req, res) => {
   res.json({ message: "API is running" });
 });
 
-app.get("/", (req, res) => {
-  res.send(`
-    <html>
-      <head>
-        <title>Practice 11 API</title>
-      </head>
-      <body>
-        <h1>Welcome to Practice 11 API</h1>
-        <ul>
-          <li><a href="/api/products" target="_blank">GET /api/products</a></li>
-          <li>POST /api/products → Use Postman or fetch</li>
-          <li>GET /api/products/:id → Replace :id with product ID</li>
-          <li>PUT /api/products/:id → Replace :id with product ID</li>
-          <li>DELETE /api/products/:id → Replace :id with product ID</li>
-        </ul>
-        <p>Note: POST, PUT, DELETE need API client (Postman, curl, or frontend fetch)</p>
-      </body>
-    </html>
-  `);
-});
-
 // CREATE product
 app.post("/api/products", async (req, res) => {
   try {
