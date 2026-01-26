@@ -37,9 +37,17 @@ async function connectDB() {
 
 connectDB();
 
-// ROOT ENDPOINT (REQUIRED)
+// ROOT ENDPOINT 
 app.get("/", (req, res) => {
   res.json({ message: "API is running" });
+});
+
+// VERSION ENDPOINTTT
+app.get("/version", (req, res) => {
+  res.json({
+    version: "1.1",
+    updatedAt: "2026-01-18"
+  });
 });
 
 // CREATE product
